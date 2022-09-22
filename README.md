@@ -13,5 +13,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 - [**Mishra**] Mishra, Kishore. **Advanced Chip Design**: Practical Examples in Verilog, 2013. [`DBURL/s/qb3rm97rqvri6my/MishraKishore-AdvancedChipDesign-Verilog.pdf`]. -- Lots of Verilog examples.
 
 
+# TASKS & ASSIGNMENTS
 
+- [21 Sep 2022]: Follow the first 8 lessons in this [GitHub page](https://github.com/silicon-vlsi-org/module-cs3-301) to get familiar and improve your skill in using Unix/Linux commands.  
 
