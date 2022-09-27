@@ -18,3 +18,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 - [21 Sep 2022]: Follow the first 8 lessons in this [GitHub page](https://github.com/silicon-vlsi-org/module-cs3-301) to get familiar with and improve your skill in using Unix/Linux commands. You can use any Linux machine (webinal or your Virtual Box) to complete the assignement.  
 
+# PROJECT
+
+## MIPS PROCESSOR
+
