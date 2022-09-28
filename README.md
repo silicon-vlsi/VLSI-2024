@@ -20,5 +20,15 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 # PROJECT
 
-## MIPS PROCESSOR
+## A SIMPLE 8-bit MIPS MICROPROCESSOR
+
+For this project we will design and immplement a 8-bit subset of the MIPS microprocessor architecture as outlined in [**Weste**] Chapter 1.7 as an example case study. The major development steps for this project will be:
+- Study chapter 1.7, understand it **well** and prepare a short presentation summarizing the project. 
+- Create a behavioural model in Verilog of the whole microprocessor and test it with a machine code of a simple program.
+- Create structural models of each sub-system of the processor using Verilog structural flow using a basic set digital gates.
+- Verify each subsystem and the entire processor using the structural models.
+- Design, layout and characterize each of the digital gates used in the processor using SKY130 technology.
+- Back annotate the chracterized delays into the Verilog models and do timing checks and find the highest frequency of operation.
+
+
 
