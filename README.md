@@ -16,9 +16,24 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 # TASKS & ASSIGNMENTS
 
+- [23 Dec 2022]: 
+  - Research and understand the I2C protocol. You can start with some of the links provided below.
+  - Create a Verilog model for the [DHT20](docs/datasheets/datasheet-temp-humidity-5193-DHT20.pdf) temp & humidity sensor.
+  - Continue with the Verilog lessons from chipverify.com
 - [21 Sep 2022]: Follow the first 8 lessons in this [GitHub page](https://github.com/silicon-vlsi-org/module-cs3-301) to get familiar with and improve your skill in using Unix/Linux commands. You can use any Linux machine (webinal or your Virtual Box) to complete the assignement.  
 
-# PROJECT
+# PROJECTS
+
+## TEMPERATURE and HUMIDITY MONITOR
+
+This project will aim at design and immplemention of a temperature & humidity monitor. The students will design a controller in Verilog to read the data from the sensor ([DHT20](docs/datasheets/datasheet-temp-humidity-5193-DHT20.pdf)), convert the data to a human readable format (deg-C and Rh-%) and drive a set of 7-segment display to display the data. In order to test the Verilog code in realtime application, the Verilog code will be synthesized into a Digilent [Arty A7 FPGA development board](https://digilentinc.com/start/ArtyA7). This will allow the students to test their Verilog code in real time.
+
+**SOME USEFUL LINKS**
+
+- [An easy-to-read I2C tutorial from sparkfun](https://learn.sparkfun.com/tutorials/i2c/)
+- [An detail IC implementation of a I2C controller](https://github.com/vsao/I2C)
+- [Datasheet: DHT20 Temperature & Humidity Sensor](docs/datasheets/datasheet-temp-humidity-5193-DHT20.pdf)
+- [Arty A7 FGPA Development Board Resources](https://digilentinc.com/start/ArtyA7)
 
 ## A SIMPLE 8-bit MIPS MICROPROCESSOR
 
