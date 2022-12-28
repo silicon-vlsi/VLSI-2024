@@ -5,7 +5,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 - [RESOURCES](#RESOURCES)
   - [Reference](#References)
-- [TASKS & ASSIGNMENTS](#TASKS-&-ASSIGNMENTS)
+- [TASKS & ASSIGNMENTS](#TASKS-and-ASSIGNMENTS)
 - [PROJECTS](#projects)
 
 # RESOURCES
@@ -20,7 +20,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 - [**Mishra**] Mishra, Kishore. **Advanced Chip Design**: Practical Examples in Verilog, 2013. [`DBURL/s/qb3rm97rqvri6my/MishraKishore-AdvancedChipDesign-Verilog.pdf`]. -- Lots of Verilog examples.
 
 
-# TASKS & ASSIGNMENTS
+# TASKS and ASSIGNMENTS
 
 - [23 Dec 2022]: 
   - Research and understand the I2C protocol. You can start with some of the links provided below.
