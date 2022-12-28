@@ -1,6 +1,12 @@
 # VLSI-2024
 Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
+# TABLE OF CONTENT
+
+- [RESOURCES](#resources)
+  -[Reference](#references)
+- [TASKS & ASSIGNMENTS](#tasks_&_assignments)
+- [PROJECTS](#projects)
 
 # RESOURCES
 
