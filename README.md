@@ -46,4 +46,64 @@ For this project we will design and immplement a 8-bit subset of the MIPS microp
 - Back annotate the chracterized delays into the Verilog models and do timing checks and find the highest frequency of operation.
 
 
+# ELECTRONIC DESIGN AUTOMATION (EDA) SOFTWARE
+
+## INSTALLING ICARUS VERILOG with GTKWAVE
+
+In this section we will demonstrate on how to install the open-source Verilog simulator **Icarus Verilog** (`iverilog`) and view the result using an open-source viewer **GTKWave**. 
+
+**SOME USEFUL LINKS**:
+- [iVerilog creator Steve Icarus's document page](https://steveicarus.github.io/iverilog)
+
+
+The following instructions are for `iverilog` and `gtkwave` from a standard **Ubuntu 18.04** repository:
+
+- `sudo apt update && sudo apt upgrade -y` : To update your distribution.
+- `sudo apt install iverilog`
+- `sudo apt install gtkwave`
+- Now let's compile a simple verilog module and it's testbench: `mydut.v` and `tb_mydut.v`. An example contnet of the Verilog code is given below.
+  - Create project directory say `mkdir -p ~/iverilog/test` and `cd` to that directory.
+  - `iverilog -o tb_mydut.vvp mydut.v tb_mydut.v` : Compile the verilog codes and create an output `tb_mydut.vvp`
+  - `vvp tb_mydut.vvp` : Convert the compiled output to a VCD format for GTKWave.
+  - `gtkwave dump.vcd` : Note: the filename `dump.vcd` is assumed to be in `tb_mydut.v`
+- Example content of `mydut.v`:
+
+```verilog
+// Simple DUT with NAND expression 
+module mydut ( input A, input B, output Y);
+  assign Y = ~(A & B);
+endmodule
+```
+
+- Example content of `tb_mydut.v` :
+
+```verilog
+module tb_mydut;
+  reg A;
+  reg B;
+  wire Y, Z;
+  
+  mydut dut0 (.A(A), .B(B), .Y(Y));
+  
+  initial begin
+    // Dump waves
+    $dumpfile("dump.vcd");
+    $dumpvars(1);
+    
+    A <= 0;
+    B <= 0;
+    #2 
+    A <= 0;
+    B <= 1'bx;
+    #2
+    A <= 1;
+    B <= 1'bz;
+    #2
+    A <= 1;
+    B <= 1'bx;
+    
+   #2 $finish;
+  end
+endmodule
+```
 
