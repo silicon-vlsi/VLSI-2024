@@ -3,10 +3,14 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 # TABLE OF CONTENT
 
-- [RESOURCES](#RESOURCES)
+- [Resources](#RESOURCES)
   - [Reference](#References)
-- [TASKS & ASSIGNMENTS](#TASKS-and-ASSIGNMENTS)
-- [PROJECTS](#projects)
+- [Tasks & Assignments](#TASKS-and-ASSIGNMENTS)
+- [Projects](#projects)
+  - [Temperature and Humidity Monitor](#TEMPERATURE-and-HUMIDITY-MONITOR)
+  - [A Simple 8-bit MIPS Microprocessor](#A-SIMPLE-8-bit-MIPS-MICROPROCESSOR)
+- [Electronic Design Automation (EDA) Software](#ELECTRONIC-DESIGN-AUTOMATION-SOFTWARE)
+  - [Installing Icarus Verilog with GTKWave](#INSTALLING-ICARUS-VERILOG-with-GTKWAVE)
 
 # RESOURCES
 
@@ -52,7 +56,7 @@ For this project we will design and immplement a 8-bit subset of the MIPS microp
 - Back annotate the chracterized delays into the Verilog models and do timing checks and find the highest frequency of operation.
 
 
-# ELECTRONIC DESIGN AUTOMATION (EDA) SOFTWARE
+# ELECTRONIC DESIGN AUTOMATION SOFTWARE
 
 ## INSTALLING ICARUS VERILOG with GTKWAVE
 
