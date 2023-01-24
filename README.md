@@ -43,6 +43,11 @@ This project will aim at design and immplemention of a SPI-based temperature mon
 - [An easy-to-read SPI tutorial from sparkfun](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
 - [Datasheet: TI SPI-based temperature sensor LM07](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)
 
+**TASKS:**
+- Learn the basics of the SPI protocol. Above resource is a good one to start with.
+- Study the datasheet of LM07 and understand the continuous read timing diagram.
+- Write a verilog code to implement the continuous read for reading 8-bit MSB of the temperature sensor. NOTE: A verilog model of the temperature sensor will be provided for this excercise.
+
 ## I2C-based TEMPERATURE and HUMIDITY MONITOR
 
 This project will aim at design and immplemention of a temperature & humidity monitor. The students will design a controller in Verilog to read the data from the sensor ([DHT20](https://www.dropbox.com/s/h3shzfsain3r9li/datasheet-temp-humidity-5193-DHT20.pdf)), convert the data to a human readable format (deg-C and Rh-%) and drive a set of 7-segment display to display the data. In order to test the Verilog code in realtime application, the Verilog code will be synthesized into a Digilent [Arty A7 FPGA development board](https://digilentinc.com/start/ArtyA7). This will allow the students to test their Verilog code in real time.
