@@ -7,6 +7,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
   - [Reference](#References)
 - [Tasks & Assignments](#TASKS-and-ASSIGNMENTS)
 - [Projects](#projects)
+  - [SPI-based TEMPERATURE MONITOR](#SPI-based-TEMPERATURE-MONITOR)
   - [Temperature and Humidity Monitor](#TEMPERATURE-and-HUMIDITY-MONITOR)
   - [A Simple 8-bit MIPS Microprocessor](#A-SIMPLE-8-bit-MIPS-MICROPROCESSOR)
 - [Electronic Design Automation (EDA) Software](#ELECTRONIC-DESIGN-AUTOMATION-SOFTWARE)
