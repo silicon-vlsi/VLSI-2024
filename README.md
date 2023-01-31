@@ -47,7 +47,8 @@ This project will aim at design and immplemention of a SPI-based temperature mon
 **TASKS:**
 - Learn the basics of the SPI protocol. Above resource is a good one to start with.
 - Study the datasheet of LM07 and understand the continuous read timing diagram.
-- Write a verilog code to implement the continuous read for reading 8-bit MSB of the temperature sensor. NOTE: A verilog model of the temperature sensor will be provided for this excercise.
+- Write a verilog code to implement the continuous read for reading 8-bit MSB of the temperature sensor. 
+  - A verilog model of the temperature sensor along with the tesetbench is provided in this repo at `verilog/TB-tsense-SPI.v` and a skeleton of the code to continuously read 8-bit data is provided in `verilog/tsense-SPI.v` . 
 
 ## I2C-based TEMPERATURE and HUMIDITY MONITOR
 
