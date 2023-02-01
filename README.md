@@ -43,7 +43,7 @@ This project will aim at design and immplemention of a SPI-based temperature mon
 
 - [An easy-to-read SPI tutorial from sparkfun](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
 - [Datasheet: TI SPI-based temperature sensor LM07](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)
-- [SAMPLE VERILOG CODE](https://edaplayground.com/x/5P7D) : Contains basic digital building blocks that one can use as a quick refeerence for Verilog.
+- [SAMPLE VERILOG CODE](https://edaplayground.com/x/5P7D) : Contains basic digital building blocks that one can use as a quick refeerence for Verilog. **NOTE** : This is not a functional block so don't try to simulate it.
 
 **TASKS:**
 - Learn the basics of the SPI protocol. Above resource is a good one to start with.
