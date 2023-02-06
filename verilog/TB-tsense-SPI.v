@@ -3,10 +3,13 @@
 //
 `timescale 1ns/1ps
 
+
 module tsense_read_tb();
   wire CS, SCK, SIO;
   reg RSTN, SYSCLK;
   wire [7:0] outreg;
+  wire [7:0] shift_reg;
+
 
   //Task for simple test
   task testRead;
@@ -19,7 +22,7 @@ module tsense_read_tb();
   //Instiate LM07
   LM07 tsense(.CS(CS), .SCK(SCK), .SIO(SIO));
   //Instiate DUT
-  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg));
+  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg), .shift_reg(shift_reg));
  
   //Initialize CS
   initial RSTN = 1'b0;
@@ -41,6 +44,9 @@ module tsense_read_tb();
     end
 endmodule
 
+//Define
+`define TEMP_SET  16'h4400
+
 // Verilog model for the SPI-based temperature 
 // sensor LM07 or it's equivalent family.
 //
@@ -51,13 +57,13 @@ module LM07(CS, SCK, SIO);
   // lm07_reg represents the register that stores
   // temperature value after A2D conversion
   // FIXME: Model the A2D
-  reg [15:0] lm07_reg =16'hA60A; 
   reg [15:0] shift_reg;
   wire clk_gated;
   
   //Reset at startup
   initial begin
-    shift_reg <= lm07_reg;
+    shift_reg = `TEMP_SET; 
+    shift_reg = shift_reg>>1;
   end
   
   //SIO bit of the LM07 is hardwired output of
@@ -71,7 +77,8 @@ module LM07(CS, SCK, SIO);
   // If high, reset
   always @(CS)
    begin
-     shift_reg <= lm07_reg;
+     shift_reg = `TEMP_SET;
+     shift_reg = shift_reg>>1;
    end
   
   //Shift register to shift the loaded temp reg
