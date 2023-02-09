@@ -22,8 +22,8 @@ module tsense_read_tb();
   //Instiate LM07
   LM07 tsense(.CS(CS), .SCK(SCK), .SIO(SIO));
   //Instiate DUT
-  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg), .shift_reg(shift_reg));
- 
+  //LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg), .shift_reg(shift_reg));
+  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg));
   //Initialize CS
   initial RSTN = 1'b0;
   
@@ -63,7 +63,7 @@ module LM07(CS, SCK, SIO);
   //Reset at startup
   initial begin
     shift_reg = `TEMP_SET; 
-    shift_reg = shift_reg>>1;
+    //shift_reg = shift_reg>>1;
   end
   
   //SIO bit of the LM07 is hardwired output of
@@ -78,7 +78,7 @@ module LM07(CS, SCK, SIO);
   always @(CS)
    begin
      shift_reg = `TEMP_SET;
-     shift_reg = shift_reg>>1;
+     //shift_reg = shift_reg>>1;
    end
   
   //Shift register to shift the loaded temp reg
