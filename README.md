@@ -37,19 +37,18 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 ## SPI-based TEMPERATURE MONITOR
 
-This project will aim at design and immplemention of a SPI-based temperature monitor. The students will design a controller in Verilog to read the data from the sensor ([LM07](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)) using the industry-standard SPI protocol, convert the data to a human readable format (deg-C) and drive a set of 7-segment display to display the data. In order to test the Verilog code in realtime application, the Verilog code will be synthesized into a Xilinx's Spartan FPGA board. This will allow the students to test their Verilog code in real time.
+This project will aim at design and immplemention of a SPI-based temperature monitor. The students will design a controller in Verilog to read the data from the sensor ([LM70](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)) using the industry-standard SPI protocol, convert the data to a human readable format (deg-C) and drive a set of 7-segment display to display the data. In order to test the Verilog code in realtime application, the Verilog code will be synthesized into a Xilinx's Spartan FPGA board. This will allow the students to test their Verilog code in real time.
 
 **SOME USEFUL LINKS**
 
 - [An easy-to-read SPI tutorial from sparkfun](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
-- [Datasheet: TI SPI-based temperature sensor LM07](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)
-- [SAMPLE VERILOG CODE](https://edaplayground.com/x/5P7D) : Contains basic digital building blocks that one can use as a quick refeerence for Verilog. **NOTE** : This is not a functional block so don't try to simulate it.
+- [Datasheet: TI SPI-based temperature sensor LM70](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)
 
-**TASKS:**
-- Learn the basics of the SPI protocol. Above resource is a good one to start with.
-- Study the datasheet of LM07 and understand the continuous read timing diagram.
-- Write a verilog code to implement the continuous read for reading 8-bit MSB of the temperature sensor. 
-  - A verilog model of the temperature sensor along with the tesetbench is provided in this repo at `verilog/TB-tsense-SPI.v` and a skeleton of the code to continuously read 8-bit data is provided in `verilog/tsense-SPI.v` . 
+:exclamation: **TASKS:** :exclamation:
+- :one: Convert the shift register code to a compact format like this `shift_reg <= shifte_reg<<1;` 
+- :two: Latch the 8-bit output from the LM70 to `outreg[7:0]` at the end of read cycle and verify you the value is the same as set in the temperature sensor.
+- :three: Follow [chipverify.com](https://www.chipverify.com/verilog/verilog-tutorial) excercises till the behavioural modeling section. Now you can use iverilog to complete the assignments.
+ 
 
 ## I2C-based TEMPERATURE and HUMIDITY MONITOR
 
@@ -93,6 +92,17 @@ The following instructions are for `iverilog` and `gtkwave` from a standard **Ub
   - `iverilog -o tb_mydut.vvp mydut.v tb_mydut.v` : Compile the verilog codes and create an output `tb_mydut.vvp`
   - `vvp tb_mydut.vvp` : Convert the compiled output to a VCD format for GTKWave.
   - `gtkwave dump.vcd` : Note: the filename `dump.vcd` is assumed to be in `tb_mydut.v`
+
+- If you want to execute the first two commands as script, you can add the first two commands to a file called say `run`:
+
+```bash 
+iverilog -o tb_mydut.vvp mydut.v tb_mydut.v
+vvp tb_mydut.vvp
+```
+
+- Now mamke the file executable by typing the follwoing command: `chmod +x run`
+- And from now on, you can simply execute the script by typing `./run`
+
 - Example content of `mydut.v`:
 
 ```verilog
