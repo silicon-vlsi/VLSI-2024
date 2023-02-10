@@ -47,7 +47,7 @@ This project will aim at design and immplemention of a SPI-based temperature mon
 :exclamation: **TASKS:** :exclamation:
 - :one: Convert the shift register code to a compact format like this `shift_reg <= shifte_reg<<1;` 
 - :two: Latch the 8-bit output from the LM70 to `outreg[7:0]` at the end of read cycle and verify you the value is the same as set in the temperature sensor.
-- :three: Follow [chipverify.com](https://www.chipverify.com/verilog/verilog-tutorial) excercises till the behavioural modeling section. Now you can use iverilog to complete the assignments.
+- :three: Follow [chipverify.com](https://www.chipverify.com/verilog/verilog-tutorial) excercises till the __Behavioural modeling__ section. Now you can use iverilog to complete the assignments.
  
 
 ## I2C-based TEMPERATURE and HUMIDITY MONITOR
