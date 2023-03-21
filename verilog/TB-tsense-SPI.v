@@ -7,8 +7,9 @@
 module tsense_read_tb();
   wire CS, SCK, SIO;
   reg RSTN, SYSCLK;
-  wire [7:0] outreg;
-  wire [7:0] shift_reg;
+  wire [7:0] dbugout;
+  wire [7:0] dataSeg;
+  wire [1:0] disp;
 
 
   //Task for simple test
@@ -22,8 +23,8 @@ module tsense_read_tb();
   //Instiate LM07
   LM07 tsense(.CS(CS), .SCK(SCK), .SIO(SIO));
   //Instiate DUT
-  //LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg), .shift_reg(shift_reg));
-  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .outreg(outreg));
+  LM07_read dut(.SYSCLK(SYSCLK), .RSTN(RSTN), .CS(CS), .SCK(SCK), .SIO(SIO), .disp(disp), .dataSeg(dataSeg), .dbugout(dbugout) );
+ 
   //Initialize CS
   initial RSTN = 1'b0;
   
@@ -45,7 +46,7 @@ module tsense_read_tb();
 endmodule
 
 //Define
-`define TEMP_SET  16'h4400
+`define TEMP_SET  16'h0F00
 
 // Verilog model for the SPI-based temperature 
 // sensor LM07 or it's equivalent family.
