@@ -45,6 +45,7 @@ This project will aim at design and immplemention of a SPI-based temperature mon
 
 - [An easy-to-read SPI tutorial from sparkfun](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
 - [Datasheet: TI SPI-based temperature sensor LM70](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)
+- [Technical Reference: Xilinx Spartan-6 FPGA Development Board](https://www.dropbox.com/s/s53w0m665e083ni/AHMY_SP6LX9_LT_Spartan6-TechRef.pdf)
 
 :exclamation: **TASKS:** :exclamation:
 - :one: Convert the shift register code to a compact format like this `shift_reg <= shifte_reg<<1;` 
