@@ -39,7 +39,7 @@ Portal for 2024 SIT batch being mentored at the Advnaced VLSI Lab.
 
 This project will aim at design and immplemention of a SPI-based temperature monitor. The students will design a controller in Verilog to read the data from the sensor ([LM70](https://www.dropbox.com/s/7ajxxywlsmr7dy7/temp-SPI-TI-LM07.pdf)) using the industry-standard SPI protocol, convert the data to a human readable format (deg-C) and drive a set of 7-segment display to display the data. In order to test the Verilog code in realtime application, the Verilog code will be synthesized into a Xilinx's Spartan FPGA board. This will allow the students to test their Verilog code in real time.
 
-![Temperature Monitor Block Diagram](docs/tempMonitor-blockDiag-v1-0322.png)
+![Temperature Monitor Block Diagram](tempMonitor-blockDiag-v1-0322.png)
 
 **SOME USEFUL LINKS**
 
